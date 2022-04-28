@@ -5,7 +5,7 @@ public class Numeros0a99 {
             if (i != 99){
                 System.out.print(i + ", ");
             }else {
-                System.out.print(i);
+                System.out.print(i + " ");
             }
         }
     }
