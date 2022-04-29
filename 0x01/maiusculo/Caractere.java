@@ -5,9 +5,15 @@ public class Caractere {
 
     }
     public static boolean EhMaiusculo(char c){
-        if (c == 'C'){
-            return true;
-        }
-        return false;
+       while(c != 'C'){
+
+
+           System.out.println(false);
+           }
+
+        return true;
     }
-}
+
+
+    }
+
