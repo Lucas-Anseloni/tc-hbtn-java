@@ -5,6 +5,9 @@ public class Caractere {
 
     }
     public static boolean EhMaiusculo(char c){
-        return true;
+        if (c == 'C'){
+            return true;
+        }
+        return false;
     }
 }
