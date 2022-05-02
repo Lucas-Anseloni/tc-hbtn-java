@@ -7,7 +7,7 @@ public class Quadrado {
 
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new IllegalArgumentException(e.getMessage());
         }
         return lado * lado;
     }
