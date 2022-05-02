@@ -3,7 +3,7 @@ public class Numero {
         try{
             int c;
           c = a / b;
-            System.out.println(a + "/" + b + "=" + c);
+            System.out.println(a + " / " + b + " = " + c);
           if (b == 0){
               throw new Exception("Nao eh permitido fazer uma divisao por zero!");
           }
