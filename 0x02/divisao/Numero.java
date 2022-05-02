@@ -10,7 +10,7 @@ public class Numero {
         }catch (Exception e){
             System.out.println("Nao eh possivel dividir por zero");
         }finally {
-            System.out.println("finally");
+            System.out.println();
         }
     }
 }
