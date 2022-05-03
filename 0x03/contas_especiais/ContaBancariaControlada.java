@@ -1,10 +1,11 @@
-package contas_especiais;
+
 import exceptions.*;
 
 public class ContaBancariaControlada extends ContaBancariaBasica {
 
-    private double saldoMinimo = 0;
-    private double valorPenalidade = 5;
+    private double saldoMinimo;
+    private double valorPenalidade;
+    private double saldo;
 
     public ContaBancariaControlada(String numeracao, double taxaJurosAnual, double saldoMinimo, double valorPenalidade) {
         super(numeracao, taxaJurosAnual);
