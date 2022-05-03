@@ -35,7 +35,7 @@ public class Livro {
         }
 
 
-        return "";
+        return autor;
     }
 
     public void setAutor(String autor) {
