@@ -21,8 +21,10 @@ public class ContaBancariaControlada extends ContaBancariaBasica {
 
     @Override
     public void aplicarAtualizacaoMensal(){
-
-           this.saldo =  saldo - calcularTarifaMensal() + calcularJurosMensal() - valorPenalidade;
+       if (saldo == 0 || saldo <= saldoMinimo){
+           this.saldo =  (saldo - calcularTarifaMensal() + calcularJurosMensal()) - valorPenalidade;
+       }else {
+           this.saldo =  saldo - calcularTarifaMensal() + calcularJurosMensal();
        }
 
 
