@@ -8,6 +8,8 @@ public class ContaBancariaControlada extends ContaBancariaBasica {
 
     public ContaBancariaControlada(String numeracao, double taxaJurosAnual, double saldoMinimo, double valorPenalidade) {
         super(numeracao, taxaJurosAnual);
+        this.saldoMinimo = saldoMinimo;
+        this.valorPenalidade = valorPenalidade;
 
     }
 
