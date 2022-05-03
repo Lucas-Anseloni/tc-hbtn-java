@@ -5,9 +5,8 @@ public class ContaBancariaTarifada extends ContaBancariaBasica {
 
     private int quantidadeTransacoes;
 
-    public ContaBancariaTarifada(String numeracao, double taxaJurosAnual) {
-        super(numeracao, taxaJurosAnual);
-        this.quantidadeTransacoes = quantidadeTransacoes;
+    public ContaBancariaTarifada(String numeracao,double taxaJurosAnual,doublesaldo) {
+        super(numeracao,taxaJurosAnual);
     }
 
     public int getQuantidadeTransacoes() {
