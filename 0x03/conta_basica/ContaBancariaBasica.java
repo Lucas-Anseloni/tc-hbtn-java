@@ -25,7 +25,7 @@ public class ContaBancariaBasica {
 
     void depositar(double valor){
         if (valor <= 0){
-            System.out.println("Valor para deposito deve ser maior que 0");
+            System.out.println("Valor para deposito deve ser maior que 0\n");
         }else {
             this.saldo = this.saldo + valor;
         }
