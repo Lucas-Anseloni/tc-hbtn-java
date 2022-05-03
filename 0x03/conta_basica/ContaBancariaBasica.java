@@ -33,9 +33,9 @@ public class ContaBancariaBasica {
 
     void sacar(double valor){
         if (valor < 0){
-            System.out.println("Valor de saque deve ser menor que 0");
+            System.out.println("Valor de saque deve ser menor que 0\n");
         }else if (valor > saldo){
-            System.out.println("Valor de saque deve ser menor que o saldo atual");
+            System.out.println("Valor de saque deve ser menor que o saldo atual\n");
         }else {
             saldo = saldo - valor;
         }
