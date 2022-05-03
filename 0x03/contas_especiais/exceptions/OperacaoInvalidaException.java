@@ -1,13 +1,8 @@
-package exceptions;
+package contas_especiais.exceptions;
 
-public class OperacaoInvalidaException extends Exception {
-
-
-    private static final long serialVersionUID = 1L;
+public class OperacaoInvalidaException extends Exception{
 
     public OperacaoInvalidaException(String message) {
         super(message);
-
     }
-
 }

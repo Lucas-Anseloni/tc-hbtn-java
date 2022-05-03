@@ -1,57 +1,65 @@
-import exceptions.*;
+package contas_especiais;
+
+
+import conta_basica.exceptions.OperacaoInvalidaException;
 
 public class ContaBancariaBasica {
+
     private String numeracao;
-    protected double saldo;
+    protected double saldo = 0.0;
     private double taxaJurosAnual;
 
     public ContaBancariaBasica(String numeracao, double taxaJurosAnual) {
         this.numeracao = numeracao;
-        this.saldo = 0;
         this.taxaJurosAnual = taxaJurosAnual;
     }
+
     public String getNumeracao() {
         return numeracao;
     }
+
     public double getSaldo() {
         return saldo;
     }
+
     public double getTaxaJurosAnual() {
         return taxaJurosAnual;
     }
-    void depositar(double valor) throws OperacaoInvalidaException {
-        if(valor > 0) {
-            this.saldo = saldo + valor;
-        }else {
+
+    public void depositar(double valor) throws OperacaoInvalidaException, contas_especiais.exceptions.OperacaoInvalidaException {
+        if (valor <= 0){
             throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
+        }else {
+            this.saldo = this.saldo + valor;
         }
     }
-    void sacar(double valor) throws OperacaoInvalidaException {
 
-        if (valor < 0) {
-            throw new OperacaoInvalidaException("Valor de saque deve ser maior que 0");
-        } else if (saldo < valor) {
-            throw new OperacaoInvalidaException("Valor de saque deve ser maior que o saldo atual");
-        } else {
+    public void sacar(double valor) throws OperacaoInvalidaException{
+        if (valor < 0){
+            throw new OperacaoInvalidaException("Valor de saque deve ser menor que 0");
+        }else if (valor > saldo){
+            throw new OperacaoInvalidaException("Valor de saque deve ser menor que o saldo atual");
+        }else {
             saldo = saldo - valor;
         }
+    }
 
-    }
-    public double calcularTarifaMensal() {
-        if ((saldo * 0.1) < 10) {
-            return saldo * 0.1;
-        } else {
-            return 10.00;
+    public double calcularTarifaMensal(){
+        if (saldo * 0.10 < 10){
+            return saldo * 0.10;
         }
+        return 10;
     }
-    public double calcularJurosMensal() {
-        if (saldo < 0) {
+
+    public double calcularJurosMensal(){
+        if (saldo < 0){
             return 0.00;
-        } else {
-            return saldo * ((taxaJurosAnual / 100) / 12);
         }
+        return saldo * ((taxaJurosAnual / 100) / 12);
     }
-    void aplicarAtualizacaoMensal() {
-        this.saldo = saldo - calcularTarifaMensal() + calcularJurosMensal() ;
+
+    public void aplicarAtualizacaoMensal(){
+        this.saldo =  saldo - calcularTarifaMensal() + calcularJurosMensal();
+
     }
 }
