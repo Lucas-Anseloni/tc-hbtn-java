@@ -1,7 +1,10 @@
+
+
+
 public class ContaBancariaControlada extends ContaBancariaBasica {
 
     private double saldoMinimo = 0;
-    private double valorPenalidade = 5  ;
+    private double valorPenalidade = 5;
 
     public ContaBancariaControlada(String numeracao, double taxaJurosAnual, double saldoMinimo, double valorPenalidade) {
         super(numeracao, taxaJurosAnual);
@@ -17,7 +20,11 @@ public class ContaBancariaControlada extends ContaBancariaBasica {
     }
 
     @Override
-    void aplicarAtualizacaoMensal() {
-        this.saldo = saldo - calcularTarifaMensal() + calcularJurosMensal() - valorPenalidade   ;
+    public void aplicarAtualizacaoMensal(){
+
+           this.saldo =  saldo - calcularTarifaMensal() + calcularJurosMensal() - valorPenalidade;
+       }
+
+
     }
 }
