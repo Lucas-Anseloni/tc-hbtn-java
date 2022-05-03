@@ -1,5 +1,5 @@
 
-import exceptions.OperacaoInvalidaException;
+import conta_basica.exceptions.OperacaoInvalidaException;
 
 public class ContaBancariaTarifada extends ContaBancariaBasica {
 
