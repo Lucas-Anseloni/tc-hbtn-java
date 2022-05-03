@@ -1,7 +1,7 @@
 
 
 
-
+import exceptions.OperacaoInvalidaException;
 
 public class ContaBancariaBasica {
 
