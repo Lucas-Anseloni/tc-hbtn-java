@@ -1,4 +1,4 @@
 
 
-public class AutorInvalidoException extends  Exception{
+public class AutorInvalidoException extends Exception{
 }
