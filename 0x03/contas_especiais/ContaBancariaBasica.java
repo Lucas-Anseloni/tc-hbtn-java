@@ -1,7 +1,7 @@
 
 
 
-import exceptions.OperacaoInvalidaException;
+import contas_especiais.exceptions.OperacaoInvalidaException;
 
 public class ContaBancariaBasica {
 
