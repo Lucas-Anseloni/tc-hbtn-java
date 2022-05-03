@@ -1,5 +1,8 @@
 
 
+
+import conta_basica.exceptions.OperacaoInvalidaException;
+
 public class ContaBancariaBasica {
 
     private String numeracao;
@@ -23,19 +26,19 @@ public class ContaBancariaBasica {
         return taxaJurosAnual;
     }
 
-    void depositar(double valor){
+    void depositar(double valor) throws OperacaoInvalidaException {
         if (valor <= 0){
-            System.out.println("Valor para deposito deve ser maior que 0\n");
+            throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
         }else {
             this.saldo = this.saldo + valor;
         }
     }
 
-    void sacar(double valor){
+    void sacar(double valor) throws OperacaoInvalidaException{
         if (valor < 0){
-            System.out.println("Valor de saque deve ser menor que 0\n");
+            throw new OperacaoInvalidaException("Valor de saque deve ser menor que 0");
         }else if (valor > saldo){
-            System.out.println("Valor de saque deve ser menor que o saldo atual\n");
+            throw new OperacaoInvalidaException("Valor de saque deve ser menor que o saldo atual");
         }else {
             saldo = saldo - valor;
         }
