@@ -27,11 +27,11 @@ public class ContaBancariaTarifada extends ContaBancariaBasica {
         }
 
     @Override
-    public void sacar(double valor) throws conta_basica.exceptions.OperacaoInvalidaException {
+    public void sacar(double valor) throws OperacaoInvalidaException {
         if (valor < 0){
-            throw new conta_basica.exceptions.OperacaoInvalidaException("Valor de saque deve ser menor que 0");
+            throw new OperacaoInvalidaException("Valor de saque deve ser menor que 0");
         }else if (valor > saldo){
-            throw new conta_basica.exceptions.OperacaoInvalidaException("Valor de saque deve ser menor que o saldo atual");
+            throw new OperacaoInvalidaException("Valor de saque deve ser menor que o saldo atual");
         }else {
             this.saldo = saldo - valor - 0.10;
         }
