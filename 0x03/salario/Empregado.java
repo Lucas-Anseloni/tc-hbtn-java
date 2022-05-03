@@ -11,14 +11,14 @@ public class Empregado {
 
     double calcularBonus(Departamento departamento){
         if(departamento.alcancouMeta() == true){
-            return salarioFixo * 0.1d;
+            return salarioFixo * 0.10;
         }
-        return 0;
+        return 0.00;
     }
 
     double calcularSalarioTotal(Departamento departamento){
         if(departamento.alcancouMeta() == true){
-            return salarioFixo * 1.1d;
+            return salarioFixo * 1.10;
         }
         return salarioFixo;
     }
