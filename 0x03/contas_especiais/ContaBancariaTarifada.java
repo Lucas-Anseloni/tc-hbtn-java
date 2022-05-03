@@ -1,35 +1,36 @@
-
 import exceptions.OperacaoInvalidaException;
 
 public class ContaBancariaTarifada extends ContaBancariaBasica {
 
     private int quantidadeTransacoes;
 
-    public ContaBancariaTarifada(String numeracao,double taxaJurosAnual,doublesaldo) {
-        super(numeracao,taxaJurosAnual);
+    public ContaBancariaTarifada(String numeracao, double taxaJurosAnual, double saldo) {
+        super(numeracao, taxaJurosAnual);
+        // TODO Auto-generated constructor stub
     }
 
+    @Override
+    void depositar(double valor) throws OperacaoInvalidaException {
+        if(valor > 0) {
+            this.saldo = saldo + valor - 0.10;
+        }else {
+            throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
+        }
+    }
     public int getQuantidadeTransacoes() {
         return quantidadeTransacoes;
     }
-
     @Override
-    public void depositar(double valor) throws OperacaoInvalidaException {
-          if (valor <= 0){
-                throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
-            }else {
-                this.saldo = saldo + valor - 0.10;
-            }
+    void sacar(double valor) throws OperacaoInvalidaException {
+
+        if (valor < 0) {
+            throw new OperacaoInvalidaException("Valor de saque deve ser maior que 0");
+        } else if (saldo < valor) {
+            throw new OperacaoInvalidaException("Valor de saque deve ser maior que o saldo atual");
+        } else {
+            saldo = saldo - valor - 0.10;
         }
 
-    @Override
-    public void sacar(double valor) throws OperacaoInvalidaException {
-        if (valor < 0){
-            throw new conta_basica.exceptions.OperacaoInvalidaException("Valor de saque deve ser menor que 0");
-        }else if (valor > saldo){
-            throw new conta_basica.exceptions.OperacaoInvalidaException("Valor de saque deve ser menor que o saldo atual");
-        }else {
-            this.saldo = saldo - valor - 0.10;
-        }
     }
+
 }
