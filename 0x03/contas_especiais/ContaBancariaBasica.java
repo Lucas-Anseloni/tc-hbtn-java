@@ -1,4 +1,4 @@
-package contas_especiais;
+import exceptions.*;
 
 
 import conta_basica.exceptions.OperacaoInvalidaException;

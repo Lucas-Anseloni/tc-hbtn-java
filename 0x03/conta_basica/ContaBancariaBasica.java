@@ -1,7 +1,7 @@
+import exceptions.*;
 
 
-
-import exceptions.OperacaoInvalidaException;
+import conta_basica.exceptions.OperacaoInvalidaException;
 
 public class ContaBancariaBasica {
 
@@ -26,7 +26,7 @@ public class ContaBancariaBasica {
         return taxaJurosAnual;
     }
 
-    void depositar(double valor) throws OperacaoInvalidaException {
+    public void depositar(double valor) throws OperacaoInvalidaException {
         if (valor <= 0){
             throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
         }else {
@@ -34,7 +34,7 @@ public class ContaBancariaBasica {
         }
     }
 
-    void sacar(double valor) throws OperacaoInvalidaException{
+    public void sacar(double valor) throws OperacaoInvalidaException{
         if (valor < 0){
             throw new OperacaoInvalidaException("Valor de saque deve ser menor que 0");
         }else if (valor > saldo){
@@ -44,21 +44,21 @@ public class ContaBancariaBasica {
         }
     }
 
-    double calcularTarifaMensal(){
+    public double calcularTarifaMensal(){
         if (saldo * 0.10 < 10){
             return saldo * 0.10;
         }
         return 10;
     }
 
-    double calcularJurosMensal(){
+    public double calcularJurosMensal(){
         if (saldo < 0){
             return 0.00;
         }
         return saldo * ((taxaJurosAnual / 100) / 12);
     }
 
-    void aplicarAtualizacaoMensal(){
+    public void aplicarAtualizacaoMensal(){
         this.saldo =  saldo - calcularTarifaMensal() + calcularJurosMensal();
 
     }
