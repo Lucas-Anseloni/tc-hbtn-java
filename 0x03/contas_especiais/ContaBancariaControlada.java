@@ -1,5 +1,5 @@
 
-
+import exceptions.*;
 
 public class ContaBancariaControlada extends ContaBancariaBasica {
 
