@@ -1,4 +1,4 @@
-
+package abstrata;
 
 abstract class FormaGeometrica {
 
