@@ -32,9 +32,10 @@ public class Retangulo extends FormaGeometrica{
         return this.altura * this.largura;
     }
 
-    //@Override
-    //public String toString(){
-
-     //   return [Retangulo] <largura> / <altura>;
-   // }
-}
+    @Override
+    public String toString(){
+        String result;
+        result = String.format("[Retangulo] <%s> / <%s>",largura,altura);
+        return result;
+    }
+}//[Retangulo] <largura> / <altura>
