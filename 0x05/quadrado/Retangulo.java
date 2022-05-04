@@ -1,6 +1,6 @@
 
 
-import retangulo_completo.FormaGeometrica;
+import FormaGeometrica;
 
 public class Retangulo extends FormaGeometrica {
 
