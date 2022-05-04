@@ -1,6 +1,6 @@
-package abstrata;
 
-abstract class FormaGeometrica {
 
-    abstract double area();
+public abstract class FormaGeometrica {
+
+    public abstract double area();
 }
