@@ -10,7 +10,7 @@ public class Pedido {
         this.itens = itens;
     }
 
-    public int getPercentualDesconto() {
+    public double getPercentualDesconto() {
         return percentualDesconto;
     }
 
