@@ -1,8 +1,8 @@
 
-import produtos.Produto;
+
 public class Pedido {
 
-    private int percentualDesconto;
+    private double percentualDesconto;
     private ItemPedido[] itens;
 
     public Pedido(int percentualDesconto, ItemPedido[] itens) {
