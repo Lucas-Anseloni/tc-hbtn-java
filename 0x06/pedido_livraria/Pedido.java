@@ -1,5 +1,5 @@
 
-
+import produtos.Produtos;
 public class Pedido {
 
     private int percentualDesconto;
