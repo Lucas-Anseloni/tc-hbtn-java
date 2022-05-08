@@ -1,4 +1,4 @@
-package workflow;
+
 
 public interface CanalNotificacao {
 
