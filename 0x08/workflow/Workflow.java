@@ -13,6 +13,7 @@ public class Workflow {
 
 
     public void registrarAtividade(Atividade atividade) {
+
         this.atividades.add(atividade);
     }
 

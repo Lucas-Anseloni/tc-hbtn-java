@@ -1,9 +1,11 @@
 
 
-import atividades.*;
+import atividades.CarregarVideo;
+import atividades.CodificarVideo;
+import atividades.EnviarEmail;
+import atividades.ModificarStatusVideo;
 
-
-
+import java.util.Locale;
 
 public class Program {
 
