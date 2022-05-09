@@ -1,5 +1,9 @@
 
 
+import atividades.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Workflow {
 
     List<Atividade> atividades;
