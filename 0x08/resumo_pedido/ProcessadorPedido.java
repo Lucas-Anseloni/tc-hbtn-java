@@ -1,6 +1,6 @@
 
 
-import resumo_pedido.provedores.*;
+import provedores.*;
 
 public class ProcessadorPedido {
     
