@@ -1,9 +1,6 @@
 
 
-import atividades.CarregarVideo;
-import atividades.CodificarVideo;
-import atividades.EnviarEmail;
-import atividades.ModificarStatusVideo;
+import atividades.*;
 
 import java.util.Locale;
 
