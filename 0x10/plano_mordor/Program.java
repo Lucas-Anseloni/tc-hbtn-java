@@ -1,6 +1,6 @@
 
 
-import plano_mordor.comida.*;
+import comida.*;
 
 import java.util.Locale;
 
