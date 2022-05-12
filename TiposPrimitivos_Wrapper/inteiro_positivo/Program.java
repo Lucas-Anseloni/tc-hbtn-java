@@ -1,4 +1,4 @@
-
+package inteiro_positivo;
 
 import java.util.Locale;
 
