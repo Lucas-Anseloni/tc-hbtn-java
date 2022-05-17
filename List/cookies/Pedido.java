@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Pedido {
 
-    List<PedidoCookie> cookies;
+    ArrayList<PedidoCookie> cookies;
 
     public Pedido() {
         cookies = new  ArrayList<PedidoCookie>();
