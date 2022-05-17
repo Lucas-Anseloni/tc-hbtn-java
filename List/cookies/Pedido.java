@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public class Pedido {
 
-    ArrayList<PedidoCookie> cookies;
+    List<PedidoCookie> cookies;
 
     public Pedido() {
-        this.cookies = new  ArrayList<PedidoCookie>();
+        cookies = new ArrayList<PedidoCookie>();
     }
 
     public void adicionarPedidoCookie(PedidoCookie pedidoCookie) {
