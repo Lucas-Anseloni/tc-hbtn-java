@@ -61,11 +61,11 @@ public class Banco {
             }
             for (int i = 0; i < percorrerAgencia.getClientes().size();i++){
                 Cliente encontrarCliente = percorrerAgencia.getClientes().get(i);
-                System.out.println("Cliente: "+ encontrarCliente.getNome()+" ["+(i+1) + "]");
+                System.out.println("Cliente: "+ encontrarCliente.getNome()+"["+(i+1) + "]");
 
                 if (imprimeTrasancao){
                     for (int j =0; j < encontrarCliente.getTransacoes().size();j++){
-                        System.out.println(" ["+(j + 1)+ "] valor "+ encontrarCliente.getTransacoes().get(j));
+                        System.out.println("["+(j + 1)+ "] valor "+ encontrarCliente.getTransacoes().get(j));
                     }
                 }
             }
