@@ -1,4 +1,4 @@
-package analisador_frase;
+
 
 import java.util.Locale;
 import java.util.TreeMap;
