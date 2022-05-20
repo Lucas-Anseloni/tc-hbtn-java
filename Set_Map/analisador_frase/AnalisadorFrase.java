@@ -1,30 +1,24 @@
-
+package analisador_frase;
 
 import java.util.Locale;
 import java.util.TreeMap;
 
 public class AnalisadorFrase {
 
-    public static TreeMap<String,Integer> contagemPalavras(String letra){
-            TreeMap<String,Integer> map = new TreeMap<>();
+    public static TreeMap<String, Integer> contagemPalavras(String frase) {
+        String fraseTratada = frase.toLowerCase().replaceAll("[?.!]+", "");
+        String[] palavrasNaFrase = fraseTratada.split(" ");
 
-            letra = letra.replace("?","");
-            letra = letra.replace(".","");
-            letra = letra.replace("!","");
+        TreeMap<String, Integer> contagemDePalavras = new TreeMap<>();
+        for (String palavra : palavrasNaFrase) {
+            if (!contagemDePalavras.containsKey(palavra)) {
+                contagemDePalavras.put(palavra, 1);
+            } else {
+                contagemDePalavras.put(palavra, contagemDePalavras.get(palavra) + 1);
+            }
+        }
 
-            String[] contagem = letra.split(" ");
+        return contagemDePalavras;
 
-            int qtdPalavras = 0;
-
-             for (int i =0; i < contagem.length;i++){
-                for (int j = 0; j < contagem.length;j++){
-                    if (contagem[i].equalsIgnoreCase(contagem[j])){
-                        qtdPalavras++;
-                    }
-                }
-                map.put(contagem[i].toLowerCase(),qtdPalavras );
-                qtdPalavras = 0;
-             }
-        return map;
     }
 }
